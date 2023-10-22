@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-   
+    
+    
     @IBOutlet var styleOutletsCollection: [UIButton]!
     
     @IBOutlet weak var backgroundButton: UIButton!
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var originalButtonTitleColor: UIColor?
     var originalButtonTitle: String?
     var originalButtonBackgroundColor: UIColor?
-
+    
     var originalBackgroundColor: UIColor?
     var originalBackgroundButtonTitle: String?
     var originalBackgroundButtonTitleColor: UIColor?
@@ -54,17 +54,17 @@ class ViewController: UIViewController {
         originalButtonTitleColor = buttonColor.titleColor(for: .normal)
         originalButtonTitle = buttonColor.title(for: .normal)
         originalButtonBackgroundColor = buttonColor.backgroundColor
-            
+        
         originalBackgroundColor = view.backgroundColor
         originalBackgroundButtonTitle = backgroundButton.title(for: .normal)
         originalBackgroundButtonTitleColor = backgroundButton.titleColor(for: .normal)
         originalBackgroundButtonTintColor = backgroundButton.tintColor
     }
     
-//    #warning("put the buttons opposite - A, B on bottom of screen, C, D, E - on top of screen")
-//    #warning("add button style: icon, title, color")
-    #warning("when pressing some buttons, hide other buttons or change the view color or image")
-
+    //    #warning("put the buttons opposite - A, B on bottom of screen, C, D, E - on top of screen")
+    //    #warning("add button style: icon, title, color")
+    //    #warning("when pressing some buttons, hide other buttons or change the view color or image")
+    
     @IBAction func undoChanges(_ sender: Any) {
         buttonColor.tintColor = originalButtonColor
         buttonColor.setTitleColor(originalButtonTitleColor, for: .normal)
@@ -93,8 +93,8 @@ class ViewController: UIViewController {
         buttonColor.setTitle("I'm red now!", for: .normal)
         buttonColor.backgroundColor = UIColor.red
     }
-        
-
+    
+    
     @IBAction func changeBackground(_ sender: Any) {
         view.backgroundColor = UIColor.green
         backgroundButton.setTitle("Green", for: .normal)
