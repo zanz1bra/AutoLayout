@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-0H-XHb">
-                                <rect key="frame" x="16" y="523" width="150" height="40"/>
+                                <rect key="frame" x="16" y="471" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.222983138" green="0.23224777560000001" blue="0.2928114429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="RQP-Kn-4L0"/>
@@ -28,6 +28,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="undoChanges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUT-uX-Wi0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUV-l3-C65">
                                 <rect key="frame" x="16" y="20" width="343" height="45"/>
@@ -37,9 +40,12 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="ned-6T-kZR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button C">
+                                <buttonConfiguration key="configuration" style="plain" title="Change my color!">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CsT-Cq-dHK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivw-4j-uH4">
                                 <rect key="frame" x="16" y="85" width="343" height="45"/>
@@ -49,9 +55,12 @@
                                     <constraint firstAttribute="height" constant="45" id="HPz-wq-ztf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button D">
+                                <buttonConfiguration key="configuration" style="plain" title="Hide a button!">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2F-Oy-tz1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsl-aR-fOo">
                                 <rect key="frame" x="16" y="150" width="343" height="45"/>
@@ -61,21 +70,27 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="Rao-WM-3KO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button E">
+                                <buttonConfiguration key="configuration" style="plain" title="Remove button shadows!">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideShadows:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pob-BW-Jjd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BH-eS-VL8">
-                                <rect key="frame" x="209" y="523" width="150" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BH-eS-VL8">
+                                <rect key="frame" x="209" y="471" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.222983138" green="0.23224777560000001" blue="0.2928114429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="E6K-w4-gaT"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="fhj-se-55i"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button B">
+                                <buttonConfiguration key="configuration" style="plain" title="New background!">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n88-Of-Npf"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graduationcap" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v7d-7u-HRm">
                                 <rect key="frame" x="37" y="192.5" width="300" height="286"/>
@@ -104,6 +119,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Auto Layout" id="uM6-IB-r2U"/>
                     <connections>
+                        <outlet property="backgroundButton" destination="9BH-eS-VL8" id="fka-tU-jMO"/>
+                        <outlet property="buttonColor" destination="WUV-l3-C65" id="kMP-vm-4LQ"/>
+                        <outlet property="hiddenButton" destination="ivw-4j-uH4" id="zV1-7l-rBz"/>
+                        <outlet property="hiddenShadows" destination="Gsl-aR-fOo" id="FVY-W0-Q8W"/>
+                        <outlet property="undo" destination="YXH-0H-XHb" id="9tA-BJ-otx"/>
                         <outletCollection property="styleOutletsCollection" destination="9BH-eS-VL8" collectionClass="NSMutableArray" id="0Ez-mw-eyD"/>
                         <outletCollection property="styleOutletsCollection" destination="WUV-l3-C65" collectionClass="NSMutableArray" id="GKe-Bc-rWE"/>
                         <outletCollection property="styleOutletsCollection" destination="ivw-4j-uH4" collectionClass="NSMutableArray" id="1K1-dZ-G9n"/>
@@ -120,8 +140,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gc5-Nv-Yoe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" translucent="NO" id="Xhi-7H-lhP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" translucent="NO" largeTitles="YES" id="Xhi-7H-lhP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <textAttributes key="titleTextAttributes">
